@@ -1,0 +1,229 @@
+/* === General Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Auth Section === */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.toggle-buttons {
+  display: flex;
+  background: #f0f0f0;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.toggle-buttons button.active {
+  background: #007bff;
+  color: white;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* === Todo Section === */
+.todo-container {
+  display: none;
+  max-width: 700px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  background: #343a40;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #23272b;
+}
+
+.todo-input-wrap {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input-wrap input,
+.todo-input-wrap select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.todo-input-wrap button {
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.todo-input-wrap button:hover {
+  background: #218838;
+}
+
+.task-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.task-list li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-list li:hover {
+  background: #ececec;
+}
+
+/* === 3-Dots Menu === */
+.edit-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  padding: 25px;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+}
+
+.edit-menu h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.edit-menu input,
+.edit-menu textarea,
+.edit-menu select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.edit-actions button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#saveEdit {
+  background: #007bff;
+}
+
+#deleteTask {
+  background: #dc3545;
+}
+
+#closeEdit {
+  background: #6c757d;
+}
+
+.edit-actions button:hover {
+  opacity: 0.9;
+}
+
+/* Hidden Utility */
+.hidden {
+  display: none;
+}
+
+
+
+
+

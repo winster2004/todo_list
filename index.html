@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laterbase Todo</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- 🔒 AUTH SECTION -->
+  <section id="authSection" class="auth-container">
+    <div class="auth-card">
+      <h2>Signup/Login</h2>
+      <div class="toggle-buttons">
+        <button id="loginBtn" class="active">Login</button>
+        <button id="signupBtn">Signup</button>
+      </div>
+      <form id="form">
+        <input type="text" id="nameField" placeholder="Name" />
+        <input type="email" id="emailField" placeholder="Email Address" required />
+        <input type="password" id="passwordField" placeholder="Password" required />
+        <input type="password" id="confirmField" placeholder="Confirm Password" />
+        <button class="submit-btn" type="submit">Signup</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ✅ TODO SECTION -->
+  <section id="todoSection" class="todo-container">
+    <div class="todo-header">
+      <h1>My Tasks</h1>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+
+    <div class="todo-input-wrap">
+      <input id="taskInput" type="text" placeholder="Add a new task..." />
+      <select id="taskPriority">
+        <option value="normal">Normal</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+      </select>
+      <button id="addTaskButton">Add</button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+  </section>
+
+  <!-- 🔧 Edit Menu (hidden until 3-dots clicked) -->
+  <div id="editMenu" class="edit-menu hidden">
+    <h3>Edit Task</h3>
+    <input type="text" id="editTaskName" placeholder="Task Name" />
+    <textarea id="editTaskNotes" placeholder="Notes..."></textarea>
+    <input type="text" id="editTaskCategory" placeholder="Category" />
+    <select id="editTaskPriority">
+      <option value="normal">Normal</option>
+      <option value="high">High</option>
+      <option value="low">Low</option>
+    </select>
+    <input type="date" id="editTaskDueDate" />
+    <select id="editTaskStatus">
+      <option value="active">Active</option>
+      <option value="completed">Completed</option>
+    </select>
+    <div class="edit-actions">
+      <button id="saveEdit">Update</button>
+      <button id="deleteTask">Delete</button>
+      <button id="closeEdit">Cancel</button>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
